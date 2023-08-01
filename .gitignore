@@ -1,32 +1,38 @@
-# Prerequisites
-*.d
+/*C++*/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <iostream>
+#include <cmath>
 
-# Precompiled Headers
-*.gch
-*.pch
+/*Programm name: "scrambler"*/
+// example: Aa1Aa1 = AA aa 11
+// PmeRnIiaVz8oEvuTtKvAovKD0ELAa
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+using namespace std;
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int main() 
+{
+  string code;
+  cout << "Enter code: ";
+  cin >> code;
+  
+  bool good = true;
+  
+  for (int i = 0;i < code.length();i++){
+    if (code[i] >= 'A' && code[i] <= 'Z'){
+      cout << code[i];
+    }
+  }
+  cout << " ";
+  for (int i = 0;i < code.length();i++){
+    if (code[i] >= 'a' && code[i] <= 'z'){
+      cout << code[i];
+    }
+  }
+  cout << " ";
+  for (int i = 0;i < code.length();i++){
+    if (code[i] >= '0' && code[i] <= '9'){
+      cout << code[i];
+    }
+  }
+  
+}
